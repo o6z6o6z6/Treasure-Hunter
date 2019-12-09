@@ -667,7 +667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.3, y: 0.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -751,8 +751,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.40987593, y: -0.20383038}
-  m_Size: {x: 4.074109, y: 6.06002}
+  m_Offset: {x: -0.41925892, y: -0.52949476}
+  m_Size: {x: 2.4558995, y: 5.2717032}
   m_Direction: 0
 --- !u!50 &1076815782
 Rigidbody2D:
@@ -767,14 +767,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1076815783
 Animator:
   serializedVersion: 3
@@ -851,13 +851,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076815780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.86, y: -1.18, z: 0}
-  m_LocalScale: {x: 0.241, y: 0.252, z: 1}
+  m_LocalRotation: {x: 0.00015493057, y: -0.026114652, z: -0.002275344, w: 0.9996564}
+  m_LocalPosition: {x: -6.86, y: -1.3399, z: 0}
+  m_LocalScale: {x: 0.24300028, y: 0.20591582, z: 1.0083}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.011000001, y: -2.993, z: -0.261}
 --- !u!114 &1076815786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,11 +871,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  jumpHigh: 300
+  jumpHigh: 500
   isGround: 0
   userName: hello
   r2d: {fileID: 1076815782}
-  ani: {fileID: 0}
+  ani: {fileID: 1076815783}
   aud: {fileID: 0}
   soundDiamond: {fileID: 0}
 --- !u!1 &1935538227
@@ -939,7 +939,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 50, y: 10.8}
+  m_Size: {x: 200, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -953,7 +953,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935538227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.92, y: 0.39, z: -0.6229289}
+  m_LocalPosition: {x: 92.02, y: 0.34, z: -0.6229289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

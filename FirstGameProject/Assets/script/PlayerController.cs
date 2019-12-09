@@ -18,5 +18,43 @@ public class PlayerController : MonoBehaviour
     public AudioSource aud;
     public AudioClip soundDiamond;
     #endregion
+    private void Move()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        r2d.AddForce(new Vector2(speed * h, 0));
+        ani.SetBool("Walk", h != 0);
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            speed = 8.0f;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            speed = 8.0f;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+    }
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
+        {
+            isGround = false;
+            r2d.AddForce(new Vector2(0, jumpHigh));
+            ani.SetTrigger("Jump");
+        }
+    }
 
+    private void Update()
+    {
+        Move();
+        Jump();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Tilemap")
+        {
+            isGround = true;
+        }
+    }
 }
