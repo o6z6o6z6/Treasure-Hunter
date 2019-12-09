@@ -4,9 +4,9 @@ public class PlayerController : MonoBehaviour
 {
     #region
     [Header("速度"), Range(0f, 100f)]
-    public float speed = 3.5f;
+    public float speed = 35f;
     [Header("跳躍高度"), Range(100, 2000)]
-    public int jumpHigh = 300;
+    public int jumpHigh = 1800;
     [Header("是否在地上")]
     public bool isGround = false;
     [Header("玩家名稱")]
@@ -25,15 +25,14 @@ public class PlayerController : MonoBehaviour
         ani.SetBool("Walk", h != 0);
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            speed = 8.0f;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            speed = 8.0f;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
+
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
